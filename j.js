@@ -5,18 +5,22 @@ let nColor = "#FF0000"
 let mColor = "#FFFF00"
 let oColor = "#00ff00"
 
+loadTargetColor()
+
 controlPanel.style.display = "none"
-function convertTime(){ 
+function convertTime(){
     let yearInput = document.getElementById('yearInput')
     let monthInput = document.getElementById('monthInput')   
     let dayInput = document.getElementById('dayInput')   
     let hourInput = document.getElementById('hourInput')   
     let minuteInput = document.getElementById('minuteInput')   
+    if(yearInput.value != ''){
     const dateString = (yearInput.value+" "+monthInput.value+" "+dayInput.value+" "+hourInput.value+':'+minuteInput.value) //"2025 April 10 10:00";
     const date = new Date(dateString);
     const timestamp = date.getTime();
     targetDate = timestamp;
     localStorage.setItem("targetDate", targetDate); 
+    }
 }
 
 // Function to update the counter
@@ -40,15 +44,23 @@ function updateCounter() {
         // Change the color of the counter based on the number of days
         const counterElement = document.getElementById("counter");
         const setTimeButton = document.getElementById("set-time-button");
+        const setColorButton = document.getElementById("set-color-button");
+        const setDateButton = document.getElementById("set-date-button");
         if (days >= 0 && days <= fDay) {
             counterElement.style.color = nColor;
             setTimeButton.style.boxShadow = "0 0 30px "+nColor
+            setColorButton.style.boxShadow = "0 0 30px "+nColor
+            setDateButton.style.boxShadow = "0 0 30px "+nColor
         } else if (days > fDay && days <= tDay) {
             counterElement.style.color = mColor;
             setTimeButton.style.boxShadow = "0 0 30px "+mColor
+            setColorButton.style.boxShadow = "0 0 30px "+mColor
+            setDateButton.style.boxShadow = "0 0 30px "+mColor
         } else if (days > tDay) {
             counterElement.style.color = oColor;
             setTimeButton.style.boxShadow = "0 0 30px "+oColor
+            setColorButton.style.boxShadow = "0 0 30px "+oColor
+            setDateButton.style.boxShadow = "0 0 30px "+oColor
         }
     }
 }
@@ -64,17 +76,19 @@ document.addEventListener('click',(e)=>{
         controlPanel.style.display = "none"
         color.style.display = "none"
         date.style.display = "none"
-        fDay = fromSlider.value
-        tDay = toSlider.value
-        nColor = noNocolor.value
-        mColor = shoudntcolor.value
-        oColor = finishedcolor.value
+        if(color.style.display == 'flex'){
+            fDay = fromSlider.value
+            tDay = toSlider.value
+            nColor = noNocolor.value
+            mColor = shoudntcolor.value
+            oColor = finishedcolor.value
 
-        localStorage.setItem("fDay", fDay);
-        localStorage.setItem("tDay", tDay);
-        localStorage.setItem("nColor", nColor);
-        localStorage.setItem("mColor", mColor);
-        localStorage.setItem("oColor", oColor);
+            localStorage.setItem("fDay", fDay);
+            localStorage.setItem("tDay", tDay);
+            localStorage.setItem("nColor", nColor);
+            localStorage.setItem("mColor", mColor);
+            localStorage.setItem("oColor", oColor);
+        }
     }
 })
 
@@ -127,7 +141,7 @@ document.getElementById("set-date-button").addEventListener("click", () => {
 
 // Load the target date when the page loads
 loadTargetDate();
-loadTargetColor()
+
 
 // Update the counter every second
 setInterval(updateCounter, 1000);
