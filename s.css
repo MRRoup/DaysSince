@@ -85,6 +85,19 @@ body::-webkit-scrollbar{
     border-radius: 15px;
 }
 
+#setDateBtn{
+    border: none;
+    width: 40%;
+    height: 15%;
+    border-radius: 25px;
+    background: limegreen;
+    color: #005e8d;
+    font-size: 45px;
+    font-weight: 900;
+    font-family: monospace;
+    cursor: pointer;
+
+}
 
 #controlPanel > #color{
     display: none;
