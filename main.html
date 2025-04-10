@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time Since</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div id="controlPanel">
+        <div id="date">
+            <div style="width: 100%; height: 0; text-align: center; font-size: 50px; font-family: monospace; color: white;">Select the Date:</div>
+            <div id="dateContainer">
+                <input type="number" placeholder="2025" id="yearInput" min="2000">
+                <select id="monthInput">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>            
+                </select>
+                <input type="number" placeholder="15" id="dayInput" min="1" max="31">
+                <input type="number" placeholder="03" id="hourInput" min="0" max="23">:
+                <input type="number" placeholder="00" id="minuteInput" min="0" max="59">
+            </div>
+            <input type="submit" id="setDateBtn" onclick="convertTime()">
+        </div>
+        <div id="color">
+            <div class="range_container">
+                <div class="sliders_control">
+                    <input id="fromSlider" type="range" value="3" min="1" max="100"/>
+                    <input id="toSlider" type="range" value="6" min="1" max="100"/>
+                </div>
+                <div class="form_control">
+                    <div class="form_control_container">
+                        <div class="form_control_container__time">Min</div>
+                        <input class="form_control_container__time__input" type="number" id="fromInput" value="3" min="1" max="100"/>
+                    </div>
+                    <div class="form_control_container">
+                        <div class="form_control_container__time">Max</div>
+                        <input class="form_control_container__time__input" type="number" id="toInput" value="6" min="1" max="100"/>
+                    </div>
+                </div>
+            </div>
+            <label for="noNocolor">if you restart you're a filthy pig</label>
+            <input class="colorControl" type="color" id="noNocolor" value="#FF0000">
+            <div class="textDiv">0 to -<div id="firstDay">3</div>- days</div>
+
+            <label for="shoudntcolor">You're midway there. Don't give up</label>
+            <input class="colorControl" type="color" id="shoudntcolor" value="#FFFF00">
+            <div class="textDiv">-<div id="secondDay">3</div>- to -<div id="thirdDay">6</div>- days</div>
+
+            <label for="finishedcolor">Congrats! You've done it</label>
+            <input class="colorControl" type="color" id="finishedcolor" value="#00ff00">
+            <div class="textDiv">-<div id="fourthDay">6</div>- days+</div>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div id="title">Time Since:</div>
+        <div id="counter">
+            <span id="days">0</span> Days,
+            <span id="hours">0</span> Hours,
+            <span id="minutes">0</span> Minutes<br>and
+            <span id="seconds">0</span> Seconds
+        </div>
+        <button id="set-color-button">Modify Counter</button>
+        <button id="set-time-button">Restart Counter</button>
+        <button id="set-date-button">Enter Date</button>
+    </div>
+    <script src="j.js"></script>
+</body>
+</html>
