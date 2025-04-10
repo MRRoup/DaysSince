@@ -76,19 +76,16 @@ document.addEventListener('click',(e)=>{
         controlPanel.style.display = "none"
         color.style.display = "none"
         date.style.display = "none"
-        if(color.style.display == 'flex'){
-            fDay = fromSlider.value
-            tDay = toSlider.value
-            nColor = noNocolor.value
-            mColor = shoudntcolor.value
-            oColor = finishedcolor.value
-
-            localStorage.setItem("fDay", fDay);
-            localStorage.setItem("tDay", tDay);
-            localStorage.setItem("nColor", nColor);
-            localStorage.setItem("mColor", mColor);
-            localStorage.setItem("oColor", oColor);
-        }
+        fDay = fromSlider.value
+        tDay = toSlider.value
+        nColor = noNocolor.value
+        mColor = shoudntcolor.value
+        oColor = finishedcolor.value
+        localStorage.setItem("fDay", fDay);
+        localStorage.setItem("tDay", tDay);
+        localStorage.setItem("nColor", nColor);
+        localStorage.setItem("mColor", mColor);
+        localStorage.setItem("oColor", oColor);
     }
 })
 
@@ -135,6 +132,17 @@ document.getElementById("set-date-button").addEventListener("click", () => {
         controlPanel.style.display = "flex"
         date.style.display = "flex"
         container.style.filter = 'blur(5px)'
+        fromInput.value = fDay;
+        toInput.value = tDay;
+        fromSlider.value = fDay;
+        toSlider.value = tDay;
+        noNocolor.value = nColor;
+        shoudntcolor.value = mColor;
+        finishedcolor.value = oColor;
+        firstDay.innerHTML = fDay
+        secondDay.innerHTML = fDay
+        thirdDay.innerHTML = tDay
+        fourthDay.innerHTML = tDay
     }
     
 });
