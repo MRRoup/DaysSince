@@ -46,17 +46,17 @@ function updateCounter() {
         const setTimeButton = document.getElementById("set-time-button");
         const setColorButton = document.getElementById("set-color-button");
         const setDateButton = document.getElementById("set-date-button");
-        if (days >= 0 && days <= fDay) {
+        if (days >= 0 && days < fDay) {
             counterElement.style.color = nColor;
             setTimeButton.style.boxShadow = "0 0 30px "+nColor
             setColorButton.style.boxShadow = "0 0 30px "+nColor
             setDateButton.style.boxShadow = "0 0 30px "+nColor
-        } else if (days > fDay && days <= tDay) {
+        } else if (days >= fDay && days < tDay) {
             counterElement.style.color = mColor;
             setTimeButton.style.boxShadow = "0 0 30px "+mColor
             setColorButton.style.boxShadow = "0 0 30px "+mColor
             setDateButton.style.boxShadow = "0 0 30px "+mColor
-        } else if (days > tDay) {
+        } else if (days >= tDay) {
             counterElement.style.color = oColor;
             setTimeButton.style.boxShadow = "0 0 30px "+oColor
             setColorButton.style.boxShadow = "0 0 30px "+oColor
