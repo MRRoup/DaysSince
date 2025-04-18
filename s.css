@@ -34,6 +34,7 @@ body::-webkit-scrollbar{
     text-align: center;
     font-size: 90px;
     font-family: monospace;
+    cursor: pointer;
 }
 
 #controlPanel{
