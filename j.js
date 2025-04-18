@@ -23,6 +23,10 @@ function convertTime(){
     }
 }
 
+counter.addEventListener('click',()=>{
+    navigator.clipboard.writeText(days.innerHTML + " Days, "+hours.innerHTML+' Hours, '+minutes.innerHTML+' Minutes and '+seconds.innerHTML+' Seconds')
+})
+
 // Function to update the counter
 function updateCounter() {
     if (targetDate) {
