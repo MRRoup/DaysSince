@@ -24,7 +24,7 @@ function convertTime(){
 }
 //days.innerHTML + " Days, "+hours.innerHTML+' Hours, '+minutes.innerHTML+' Minutes and '+seconds.innerHTML+' Seconds'
 counter.addEventListener('click',()=>{
-    navigator.clipboard.writeText('vless://c3426f48-8562-4b09-9af1-d78f4c4edde1@151.101.64.155:80?path=/-LiV2ry@LIGHTNING6-TEL--@LIGHTNING6-TEL--@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL-@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL--@LIGHTNING6%3Fed%3D2048&security=none&encryption=none&host=irancell.net.&type=ws#tm%E2%9A%A1%7C%40lightning6')
+    navigator.clipboard.writeText(days.innerHTML + " Days, "+hours.innerHTML+' Hours, '+minutes.innerHTML+' Minutes and '+seconds.innerHTML+' Seconds')
 })
 
 // Function to update the counter
