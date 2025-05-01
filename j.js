@@ -22,9 +22,26 @@ function convertTime(){
     localStorage.setItem("targetDate", targetDate); 
     }
 }
-
+//days.innerHTML + " Days, "+hours.innerHTML+' Hours, '+minutes.innerHTML+' Minutes and '+seconds.innerHTML+' Seconds'
 counter.addEventListener('click',()=>{
-    navigator.clipboard.writeText(days.innerHTML + " Days, "+hours.innerHTML+' Hours, '+minutes.innerHTML+' Minutes and '+seconds.innerHTML+' Seconds')
+    navigator.clipboard.writeText('حجم🔋: نامحدود تا ساعت 3️⃣2️⃣⚡️
+لوکیشن 🌐: آلمان 🇩🇪
+
+💎 خرید سرویس اختصاصی (https://t.me/lightning6/7617) 💎
+
+🔤🔤🔤🔤🔤🔤🔤🔤🔤🔤
+
+vless://c3426f48-8562-4b09-9af1-d78f4c4edde1@151.101.64.155:80?path=/-LiV2ry@LIGHTNING6-TEL--@LIGHTNING6-TEL--@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL-@LIGHTNING6-TEL--@LIGHTNING6-JOIN-@LIGHTNING6-TEL--@LIGHTNING6%3Fed%3D2048&security=none&encryption=none&host=irancell.net.&type=ws#tm%E2%9A%A1%7C%40lightning6
+🏓مخصوص تمامی اوپراتور ها 📶 📶 📶
+🔤🔤🔤🔤🔤🔤🔤🔤🔤🔤
+
+اپلیکیشن لایتنینگ⚡️(اندروید) (https://t.me/lightning6/6162)🤖
+
+نرم افزار اجرایی (ios) (https://t.me/lightning6/2013)🍏
+
+آموزش استفاده (اندروید)❓ (https://t.me/lightning6/2266?single)
+
+@lightning6:☄️کانال تلگرامی ما')
 })
 
 // Function to update the counter
