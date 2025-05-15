@@ -22,10 +22,11 @@ body::-webkit-scrollbar{
 }
 #title{
     width: 100%;
+    display: flex;
     text-align: center;
     font-size: 80px;
     font-family: monospace;
-    color: lime;
+    justify-content: center;
 }
 
 #counter {
