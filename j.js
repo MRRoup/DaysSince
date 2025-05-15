@@ -27,6 +27,26 @@ counter.addEventListener('click',()=>{
     navigator.clipboard.writeText(days.innerHTML + " Days, "+hours.innerHTML+' Hours, '+minutes.innerHTML+' Minutes and '+seconds.innerHTML+' Seconds')
 })
 
+
+document.getElementById('set-date-button').addEventListener('click',()=>{
+    const date = new Date(targetDate);    
+
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+
+    document.getElementById('yearInput').value = year;
+    let monthNames = ["January", "February", "March", "April", "May", "June", 
+                  "July", "August", "September", "October", "November", "December"];
+    document.getElementById('monthInput').value = monthNames[month];
+    document.getElementById('dayInput').value = day;
+    document.getElementById('hourInput').value = hour;
+    document.getElementById('minuteInput').value = minute;
+})
+
+
 // Function to update the counter
 function updateCounter() {
     if (targetDate) {
