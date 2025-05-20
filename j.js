@@ -9,6 +9,8 @@ loadTargetColor()
 
 controlPanel.style.display = "none"
 function convertTime(){
+    controlPanel.style.display = 'none'
+    container.style.filter = 'none'
     let yearInput = document.getElementById('yearInput')
     let monthInput = document.getElementById('monthInput')   
     let dayInput = document.getElementById('dayInput')   
